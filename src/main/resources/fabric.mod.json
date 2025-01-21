@@ -1,33 +1,23 @@
 {
   "schemaVersion": 1,
-  "name": "PepeLand Helper",
   "id": "pplhelper",
   "version": "${version}",
-  "description": "Проект направленный на помощь игроку в ориентировании на сервере",
-  "authors": [
-    "Kel Cuprum"
-  ],
-  "contributors": [
-    "AndcoolSystems [PPL Pack Updater]"
-  ],
-  "contact": {
-    "repo": "https://github.com/kel-cu/ppl-helper",
-    "homepage": "https://h.pplmods.ru",
-    "issues": "https://github.com/kel-cu/ppl-helper/issues",
-    "email": "me@kelcuprum.ru"
-  },
-  "license": "GPL-3.0",
-  "environment": "client",
+  "environment": "*",
   "entrypoints": {
-    "client": [
+    "main": [
       "ru.kelcuprum.pplhelper.PepelandHelper"
     ],
-    "modmenu": [
-      "ru.kelcuprum.pplhelper.gui.ModMenuIntegration"
+    "client": [
+      "ru.kelcuprum.pplhelper.PepelandHelper"
     ]
   },
+  "depends": {
+    "fabricloader": ">=0.15.7",
+    "fabric-api": "*",
+    "minecraft": "1.20.4"
+  },
   "mixins": [
-    "pplhelper.mixin.json"
+    "pplhelper.mixins.json"
   ],
   "accessWidener": "pplhelper.accesswidener",
   "icon": "assets/pplhelper/icon.png",
